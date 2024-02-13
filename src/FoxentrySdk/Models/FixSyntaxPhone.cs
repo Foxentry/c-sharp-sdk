@@ -1,0 +1,59 @@
+
+/**
+ * Foxentry API reference
+ *
+ * The version of the OpenAPI document: 2.0
+ * Contact: info@foxentry.cz
+ *
+ * NOTE: This file is auto generated.
+ * Do not edit the file manually.
+ */
+using System.Text.Json.Serialization;
+using System.Text.Json;
+using FoxentrySdk.Core;
+namespace FoxentrySdk.Models;
+public class FixSyntaxPhone
+{
+    [JsonPropertyName("group")]
+    public FixSyntaxPhoneGroup? Group { get; set; }
+    [JsonPropertyName("type")]
+    public FixSyntaxPhoneType? Type { get; set; }
+    [JsonPropertyName("subtype")]
+    public FixSyntaxPhoneSubtype? Subtype { get; set; }
+    [JsonPropertyName("data")]
+    public FixData? Data { get; set; }
+    /**
+     * Group of fix.
+     */
+    [JsonConverter(typeof(StringValueEnumConverter<FixSyntaxPhoneGroup>))]
+    public enum FixSyntaxPhoneGroup
+    {
+        [StringValue("SYNTAX")]
+        SYNTAX
+    }
+    /**
+     * Type of fix.
+     */
+    [JsonConverter(typeof(StringValueEnumConverter<FixSyntaxPhoneType>))]
+    public enum FixSyntaxPhoneType
+    {
+        [StringValue("VALUE_PART_ADDED")]
+        VALUE_PART_ADDED,
+        [StringValue("VALUE_PART_CHANGED")]
+        VALUE_PART_CHANGED,
+        [StringValue("VALUE_PART_REMOVED")]
+        VALUE_PART_REMOVED
+    }
+    /**
+     * Subtype of error.
+     */
+    [JsonConverter(typeof(StringValueEnumConverter<FixSyntaxPhoneSubtype>))]
+    public enum FixSyntaxPhoneSubtype
+    {
+        [StringValue("PLUS_SIGN")]
+        PLUS_SIGN,
+        [StringValue("PREFIX")]
+        PREFIX
+    }
+}
+
