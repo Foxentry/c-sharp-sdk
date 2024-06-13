@@ -10,11 +10,15 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class LocationSearchResults
 {
     [JsonPropertyName("data")]
+    [Newtonsoft.Json.JsonProperty("data")]
     public required LocationData Data { get; init; }
 }
 

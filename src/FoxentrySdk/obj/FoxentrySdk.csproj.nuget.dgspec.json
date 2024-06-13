@@ -5,7 +5,7 @@
   },
   "projects": {
     "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj",
         "projectName": "FoxentrySdk",
@@ -37,6 +37,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json.Schema": {
+              "target": "Package",
+              "version": "[3.0.15, )"
+            },
+            "Remote.Linq.Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

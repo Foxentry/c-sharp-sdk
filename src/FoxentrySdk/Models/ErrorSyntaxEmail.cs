@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class ErrorSyntaxEmail
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public ErrorSyntaxEmailGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public ErrorSyntaxEmailType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public ErrorSyntaxEmailSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public ErrorSyntaxEmailSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public ErrorSyntaxEmailDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxEmailGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxEmailGroup
     {
         [StringValue("SYNTAX")]
@@ -39,6 +49,7 @@ public class ErrorSyntaxEmail
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxEmailType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxEmailType
     {
         [StringValue("VALUE_PART")]
@@ -54,6 +65,7 @@ public class ErrorSyntaxEmail
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxEmailSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxEmailSubtype
     {
         [StringValue("DOMAIN")]
@@ -67,6 +79,7 @@ public class ErrorSyntaxEmail
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxEmailSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxEmailSeverity
     {
         [StringValue("info")]
@@ -80,6 +93,7 @@ public class ErrorSyntaxEmail
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxEmailDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxEmailDescription
     {
         [StringValue("The domain contains invalid syntax.")]

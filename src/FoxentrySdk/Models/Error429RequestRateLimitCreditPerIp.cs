@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error429RequestRateLimitCreditPerIp
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error429RequestRateLimitCreditPerIpGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error429RequestRateLimitCreditPerIpType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public Error429RequestRateLimitCreditPerIpSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error429RequestRateLimitCreditPerIpSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error429RequestRateLimitCreditPerIpDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error429RequestRateLimitCreditPerIpGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error429RequestRateLimitCreditPerIpGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error429RequestRateLimitCreditPerIp
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error429RequestRateLimitCreditPerIpType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error429RequestRateLimitCreditPerIpType
     {
         [StringValue("RATE_LIMIT")]
@@ -48,6 +59,7 @@ public class Error429RequestRateLimitCreditPerIp
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error429RequestRateLimitCreditPerIpSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error429RequestRateLimitCreditPerIpSubtype
     {
         [StringValue("CREDIT_PER_IP")]
@@ -57,6 +69,7 @@ public class Error429RequestRateLimitCreditPerIp
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error429RequestRateLimitCreditPerIpSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error429RequestRateLimitCreditPerIpSeverity
     {
         [StringValue("critical")]
@@ -66,6 +79,7 @@ public class Error429RequestRateLimitCreditPerIp
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error429RequestRateLimitCreditPerIpDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error429RequestRateLimitCreditPerIpDescription
     {
         [StringValue("The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.")]

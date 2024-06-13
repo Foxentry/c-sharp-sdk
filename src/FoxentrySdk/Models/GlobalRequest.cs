@@ -10,15 +10,21 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class GlobalRequest
 {
     [JsonPropertyName("endpoint")]
-    public virtual required string Endpoint { get; init; }
+    [Newtonsoft.Json.JsonProperty("endpoint")]
+    public required virtual string Endpoint { get; init; }
     [JsonPropertyName("code")]
+    [Newtonsoft.Json.JsonProperty("code")]
     public required string Code { get; init; }
     [JsonPropertyName("customId")]
+    [Newtonsoft.Json.JsonProperty("customId")]
     public string? CustomId { get; set; }
 }
 

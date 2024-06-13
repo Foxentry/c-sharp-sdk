@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class ErrorValuePhone
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public ErrorValuePhoneGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public ErrorValuePhoneType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public ErrorValuePhoneSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public ErrorValuePhoneSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public ErrorValuePhoneDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValuePhoneGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValuePhoneGroup
     {
         [StringValue("VALUE")]
@@ -39,6 +49,7 @@ public class ErrorValuePhone
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValuePhoneType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValuePhoneType
     {
         [StringValue("INVALID")]
@@ -50,6 +61,7 @@ public class ErrorValuePhone
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValuePhoneSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValuePhoneSubtype
     {
         [StringValue("PREFIX")]
@@ -59,6 +71,7 @@ public class ErrorValuePhone
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValuePhoneSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValuePhoneSeverity
     {
         [StringValue("info")]
@@ -72,6 +85,7 @@ public class ErrorValuePhone
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValuePhoneDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValuePhoneDescription
     {
         [StringValue("Prefix is invalid.")]

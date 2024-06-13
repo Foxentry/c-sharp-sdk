@@ -4,7 +4,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A25F7A11-F62D-4FE2-8E3D-B840762D9882}"
 EndProject
-Project("{c67ea21a-cd85-4c9f-8faf-958f66a37a21}") = "FoxentrySdk", "src\FoxentrySdk\FoxentrySdk.csproj", "{95E3000B-D83E-460D-B2FF-DF19EA948B30}"
+Project("{c9b781be-0053-420a-b361-31b07a6ce803}") = "FoxentrySdk", "src\FoxentrySdk\FoxentrySdk.csproj", "{95E3000B-D83E-460D-B2FF-DF19EA948B30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxentrySdkTests", "src\FoxentrySdk.Tests\FoxentrySdkTests.csproj", "{519F6785-F165-450B-B925-62B02F4CD8E6}"
 EndProject

@@ -10,22 +10,30 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class FixValueLocation
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public FixValueLocationGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public FixValueLocationType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public FixValueLocationSubtype? Subtype { get; set; }
     [JsonPropertyName("data")]
+    [Newtonsoft.Json.JsonProperty("data")]
     public FixData? Data { get; set; }
     /**
      * Group of fix.
      */
     [JsonConverter(typeof(StringValueEnumConverter<FixValueLocationGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum FixValueLocationGroup
     {
         [StringValue("VALUE")]
@@ -35,6 +43,7 @@ public class FixValueLocation
      * Type of fix.
      */
     [JsonConverter(typeof(StringValueEnumConverter<FixValueLocationType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum FixValueLocationType
     {
         [StringValue("PART_CHANGED")]
@@ -44,6 +53,7 @@ public class FixValueLocation
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<FixValueLocationSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum FixValueLocationSubtype
     {
         [StringValue("CITY")]

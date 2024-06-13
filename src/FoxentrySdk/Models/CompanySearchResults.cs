@@ -10,13 +10,18 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class CompanySearchResults
 {
     [JsonPropertyName("resultsCount")]
+    [Newtonsoft.Json.JsonProperty("resultsCount")]
     public required double ResultsCount { get; init; }
     [JsonPropertyName("results")]
+    [Newtonsoft.Json.JsonProperty("results")]
     public required IEnumerable<CompanyResultsResponseResults> Results { get; init; }
     public class CompanySearchResultsResults { }
 }

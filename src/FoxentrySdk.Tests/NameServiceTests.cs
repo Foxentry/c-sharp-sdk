@@ -7,7 +7,9 @@
  * NOTE: This file is auto generated.
  * Do not edit the file manually.
  */
+using System.Text;
 using System.Text.Json;
+using System.Net;
 using FoxentrySdk.Core;
 using FoxentrySdk.Models;
 using FoxentrySdk.Services;
@@ -32,7 +34,8 @@ public class NameServiceTests
             response = default(object),
             errors = default(object)
         };
-        var url = config.BaseUrl + "/name/validate";
+
+        var url = MockedHttpRequest.JoinUrl(config.BaseUrl.ToString(), "/name/validate");
 
         var query = new Dictionary<string, object>();
 
@@ -42,22 +45,36 @@ public class NameServiceTests
           { "Authorization", $"Bearer {token}" },
           { "Accept", "application/json"}
         };
-        headers.Add("Foxentry-Include-Request-Details", true.ToString());
-        headers.Add("Api-Version", "2.0");
+        headers.Add("foxentry-include-request-details", false.ToString());
+
+        var responseHeaders = new Dictionary<string, string> {
+           { "foxentry-api-version","2.0" },
+           { "foxentry-daily-credits-left","9881.64" },
+           { "foxentry-daily-credits-limit","10000" },
+           { "foxentry-rate-limit","5000" },
+           { "foxentry-rate-limit-period","900" },
+           { "foxentry-rate-limit-remaining","4999" },
+        };
 
         var mockHttp = new MockHttpMessageHandler();
         var mock = mockHttp.When(HttpMethod.Post, MockedHttpRequest.BuildPath(url, parameters, query))
-          .Respond("application/json", JsonSerializer.Serialize(expectedResponse));
+          .Respond(HttpStatusCode.OK, responseHeaders, new StringContent(JsonSerializer.Serialize(expectedResponse), Encoding.UTF8, "application/json"));
 
         mock.WithHeaders(headers);
 
         var mockedHttpRequest = new MockedHttpRequest(config, mockHttp);
         var service = new NameService(mockedHttpRequest);
 
-        var result = await service.NameValidation(true, new() { Request = null }, "2.0");
+        var result = await service.NameValidation(new() { Request = null }, false);
 
-        Assert.NotNull(result);
-        Assert.Equal(JsonSerializer.Serialize(expectedResponse), JsonSerializer.Serialize(result), StringComparer.OrdinalIgnoreCase);
+        Assert.NotNull(result.Value);
+        Assert.Equal(JsonSerializer.Serialize(expectedResponse), JsonSerializer.Serialize(result.Value), StringComparer.OrdinalIgnoreCase);
+        Assert.Equal("2.0", result.Headers.FoxentryApiVersion);
+        Assert.Equal(9881.64, result.Headers.FoxentryDailyCreditsLeft);
+        Assert.Equal(10000, result.Headers.FoxentryDailyCreditsLimit);
+        Assert.Equal(5000, result.Headers.FoxentryRateLimit);
+        Assert.Equal(900, result.Headers.FoxentryRateLimitPeriod);
+        Assert.Equal(4999, result.Headers.FoxentryRateLimitRemaining);
     }
 
 }

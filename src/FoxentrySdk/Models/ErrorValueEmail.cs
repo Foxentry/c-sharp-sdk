@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class ErrorValueEmail
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public ErrorValueEmailGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public ErrorValueEmailType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public ErrorValueEmailSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public ErrorValueEmailSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public ErrorValueEmailDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueEmailGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueEmailGroup
     {
         [StringValue("VALUE")]
@@ -39,6 +49,7 @@ public class ErrorValueEmail
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueEmailType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueEmailType
     {
         [StringValue("INVALID")]
@@ -50,6 +61,7 @@ public class ErrorValueEmail
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueEmailSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueEmailSubtype
     {
         [StringValue("DOMAIN")]
@@ -59,12 +71,14 @@ public class ErrorValueEmail
         [StringValue("DISPOSABLE")]
         DISPOSABLE,
         [StringValue("FREEMAIL")]
-        FREEMAIL
+        FREEMAIL,
+
     }
     /**
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueEmailSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueEmailSeverity
     {
         [StringValue("info")]
@@ -78,6 +92,7 @@ public class ErrorValueEmail
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueEmailDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueEmailDescription
     {
         [StringValue("Domain name is invalid.")]

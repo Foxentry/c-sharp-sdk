@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error404RequestEndpointNotFound
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error404RequestEndpointNotFoundGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error404RequestEndpointNotFoundType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public Error404RequestEndpointNotFoundSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error404RequestEndpointNotFoundSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error404RequestEndpointNotFoundDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error404RequestEndpointNotFoundGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error404RequestEndpointNotFoundGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error404RequestEndpointNotFound
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error404RequestEndpointNotFoundType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error404RequestEndpointNotFoundType
     {
         [StringValue("ENDPOINT")]
@@ -48,6 +59,7 @@ public class Error404RequestEndpointNotFound
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error404RequestEndpointNotFoundSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error404RequestEndpointNotFoundSubtype
     {
         [StringValue("NOT_FOUND")]
@@ -57,6 +69,7 @@ public class Error404RequestEndpointNotFound
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error404RequestEndpointNotFoundSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error404RequestEndpointNotFoundSeverity
     {
         [StringValue("critical")]
@@ -66,6 +79,7 @@ public class Error404RequestEndpointNotFound
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error404RequestEndpointNotFoundDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error404RequestEndpointNotFoundDescription
     {
         [StringValue("Endpoint not found. Please check Foxentry.dev for the supported endpoints.")]

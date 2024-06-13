@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class ErrorValueName
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public ErrorValueNameGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public ErrorValueNameType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public ErrorValueNameSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public ErrorValueNameSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public ErrorValueNameDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueNameGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueNameGroup
     {
         [StringValue("VALUE")]
@@ -39,6 +49,7 @@ public class ErrorValueName
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueNameType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueNameType
     {
         [StringValue("INVALID")]
@@ -50,6 +61,7 @@ public class ErrorValueName
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueNameSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueNameSubtype
     {
         [StringValue("DEGREE")]
@@ -67,6 +79,7 @@ public class ErrorValueName
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueNameSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueNameSeverity
     {
         [StringValue("info")]
@@ -80,6 +93,7 @@ public class ErrorValueName
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorValueNameDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorValueNameDescription
     {
         [StringValue("Degree value is invalid.")]

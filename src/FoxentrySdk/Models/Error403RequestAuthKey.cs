@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error403RequestAuthKey
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error403RequestAuthKeyGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error403RequestAuthKeyType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public Error403RequestAuthKeySubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error403RequestAuthKeySeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error403RequestAuthKeyDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestAuthKeyGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestAuthKeyGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error403RequestAuthKey
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestAuthKeyType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestAuthKeyType
     {
         [StringValue("AUTH")]
@@ -48,6 +59,7 @@ public class Error403RequestAuthKey
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestAuthKeySubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestAuthKeySubtype
     {
         [StringValue("KEY")]
@@ -57,6 +69,7 @@ public class Error403RequestAuthKey
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestAuthKeySeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestAuthKeySeverity
     {
         [StringValue("critical")]
@@ -66,6 +79,7 @@ public class Error403RequestAuthKey
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestAuthKeyDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestAuthKeyDescription
     {
         [StringValue("Provided API key is not valid. Please check the project settings at app.foxentry.com.")]

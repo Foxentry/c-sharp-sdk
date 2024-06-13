@@ -1,0 +1,12 @@
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/bin/Debug/net8.0/FoxentrySdk.deps.json
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/bin/Debug/net8.0/FoxentrySdk.dll
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/bin/Debug/net8.0/FoxentrySdk.pdb
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/FoxentrySdk.csproj.AssemblyReference.cache
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/FoxentrySdk.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/FoxentrySdk.AssemblyInfoInputs.cache
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/FoxentrySdk.AssemblyInfo.cs
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/FoxentrySdk.csproj.CoreCompileInputs.cache
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/FoxentrySdk.dll
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/refint/FoxentrySdk.dll
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/FoxentrySdk.pdb
+/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/Debug/net8.0/ref/FoxentrySdk.dll

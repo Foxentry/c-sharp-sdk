@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error403RequestNotAllowedIp
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error403RequestNotAllowedIpGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error403RequestNotAllowedIpType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public Error403RequestNotAllowedIpSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error403RequestNotAllowedIpSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error403RequestNotAllowedIpDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestNotAllowedIpGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestNotAllowedIpGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error403RequestNotAllowedIp
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestNotAllowedIpType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestNotAllowedIpType
     {
         [StringValue("NOT_ALLOWED")]
@@ -48,6 +59,7 @@ public class Error403RequestNotAllowedIp
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestNotAllowedIpSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestNotAllowedIpSubtype
     {
         [StringValue("IP")]
@@ -57,6 +69,7 @@ public class Error403RequestNotAllowedIp
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestNotAllowedIpSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestNotAllowedIpSeverity
     {
         [StringValue("critical")]
@@ -66,6 +79,7 @@ public class Error403RequestNotAllowedIp
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error403RequestNotAllowedIpDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error403RequestNotAllowedIpDescription
     {
         [StringValue("The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.")]

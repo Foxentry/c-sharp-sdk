@@ -11,6 +11,6 @@ namespace FoxentrySdk.Core;
 
 public interface IHttpRequest
 {
-    Task<T> Request<T>(ApiRequestOptions options);
-    Task Request(ApiRequestOptions options);
+    Task<ApiResponse<T>> Request<T>(ApiRequestOptions options);
+    Task<object> Request(ApiRequestOptions options);
 }

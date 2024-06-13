@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error402RequestBillingNoCredit
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error402RequestBillingNoCreditGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error402RequestBillingNoCreditType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public Error402RequestBillingNoCreditSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error402RequestBillingNoCreditSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error402RequestBillingNoCreditDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error402RequestBillingNoCreditGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error402RequestBillingNoCreditGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error402RequestBillingNoCredit
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error402RequestBillingNoCreditType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error402RequestBillingNoCreditType
     {
         [StringValue("BILLING")]
@@ -48,6 +59,7 @@ public class Error402RequestBillingNoCredit
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error402RequestBillingNoCreditSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error402RequestBillingNoCreditSubtype
     {
         [StringValue("NO_CREDIT")]
@@ -57,6 +69,7 @@ public class Error402RequestBillingNoCredit
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error402RequestBillingNoCreditSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error402RequestBillingNoCreditSeverity
     {
         [StringValue("critical")]
@@ -66,6 +79,7 @@ public class Error402RequestBillingNoCredit
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error402RequestBillingNoCreditDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error402RequestBillingNoCreditDescription
     {
         [StringValue("No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.")]

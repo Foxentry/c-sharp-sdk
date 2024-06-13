@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error400RequestOptionsParameterCombination
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error400RequestOptionsParameterCombinationGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error400RequestOptionsParameterCombinationType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public Error400RequestOptionsParameterCombinationSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error400RequestOptionsParameterCombinationSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error400RequestOptionsParameterCombinationDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestOptionsParameterCombinationGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestOptionsParameterCombinationGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error400RequestOptionsParameterCombination
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestOptionsParameterCombinationType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestOptionsParameterCombinationType
     {
         [StringValue("OPTIONS")]
@@ -48,6 +59,7 @@ public class Error400RequestOptionsParameterCombination
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestOptionsParameterCombinationSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestOptionsParameterCombinationSubtype
     {
         [StringValue("PARAMETERS_COMBINATION")]
@@ -57,6 +69,7 @@ public class Error400RequestOptionsParameterCombination
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestOptionsParameterCombinationSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestOptionsParameterCombinationSeverity
     {
         [StringValue("critical")]
@@ -66,6 +79,7 @@ public class Error400RequestOptionsParameterCombination
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestOptionsParameterCombinationDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestOptionsParameterCombinationDescription
     {
         [StringValue("Combination of options or their values is not valid.")]

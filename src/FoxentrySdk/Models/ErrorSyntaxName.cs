@@ -10,26 +10,36 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class ErrorSyntaxName
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public ErrorSyntaxNameGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public ErrorSyntaxNameType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public ErrorSyntaxNameSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public ErrorSyntaxNameSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public ErrorSyntaxNameDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxNameGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxNameGroup
     {
         [StringValue("SYNTAX")]
@@ -39,6 +49,7 @@ public class ErrorSyntaxName
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxNameType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxNameType
     {
         [StringValue("VALUE_PART_MISSING")]
@@ -50,6 +61,7 @@ public class ErrorSyntaxName
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxNameSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxNameSubtype
     {
         [StringValue("NAME")]
@@ -63,6 +75,7 @@ public class ErrorSyntaxName
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxNameSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxNameSeverity
     {
         [StringValue("info")]
@@ -76,6 +89,7 @@ public class ErrorSyntaxName
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<ErrorSyntaxNameDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ErrorSyntaxNameDescription
     {
         [StringValue("Value is missing the name part.")]

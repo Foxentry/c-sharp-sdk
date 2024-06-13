@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoxentrySdkTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c3ba2ef5aed33208ee4804e44dce5c311eead3e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc44c5a1769d7b3a8c727fe2183a32e7ad8a84f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoxentrySdkTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoxentrySdkTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

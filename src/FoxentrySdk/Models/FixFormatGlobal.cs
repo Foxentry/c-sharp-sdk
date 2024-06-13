@@ -10,31 +10,42 @@
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class FixFormatGlobal
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public FixFormatGlobalGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public FixFormatGlobalType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public FixFormatGlobalSubtype? Subtype { get; set; }
     [JsonPropertyName("data")]
+    [Newtonsoft.Json.JsonProperty("data")]
     public FixData? Data { get; set; }
     /**
      * Group of fix.
      */
     [JsonConverter(typeof(StringValueEnumConverter<FixFormatGlobalGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum FixFormatGlobalGroup
     {
         [StringValue("FORMAT")]
-        FORMAT
+        FORMAT,
+        [StringValue("VALUE")]
+        VALUE
     }
     /**
      * Type of fix.
      */
     [JsonConverter(typeof(StringValueEnumConverter<FixFormatGlobalType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum FixFormatGlobalType
     {
         [StringValue("CHANGED")]
@@ -44,6 +55,7 @@ public class FixFormatGlobal
      * Subtype of fix.
      */
     [JsonConverter(typeof(StringValueEnumConverter<FixFormatGlobalSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum FixFormatGlobalSubtype
     {
         [StringValue("CASE_SENSITIVITY")]
@@ -51,7 +63,10 @@ public class FixFormatGlobal
         [StringValue("DIACRITICS")]
         DIACRITICS,
         [StringValue("WHITESPACES")]
-        WHITESPACES
+        WHITESPACES,
+        [StringValue("TYPO")]
+        TYPO,
+
     }
 }
 
