@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj": {}
+    "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj": {}
   },
   "projects": {
-    "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj": {
+    "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj": {
       "version": "1.0.1",
       "restore": {
-        "projectUniqueName": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj",
+        "projectUniqueName": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj",
         "projectName": "FoxentrySdk",
-        "projectPath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj",
+        "projectPath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj",
         "packagesPath": "/Users/jakubvacek/.nuget/packages/",
-        "outputPath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/obj/",
+        "outputPath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jakubvacek/.nuget/NuGet/NuGet.Config"

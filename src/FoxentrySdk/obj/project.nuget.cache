@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KCh3dlQV5+1C4wCTiYsWaMOdKNykdtrV7wz8X30HIcNs8RZy/ti0T7wen1BKDNtzv0ZyVmqlBupJ0gjgts4VqQ==",
+  "dgSpecHash": "qPRrAu4816XrEgZdMMBwSfLv6dQLHit3TTNDUBabcE4KHU+7lLlXfSo3o49VTOuuCR5s2epTq5td4CTyBamiMA==",
   "success": true,
-  "projectFilePath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj",
+  "projectFilePath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj",
   "expectedPackageFiles": [
     "/Users/jakubvacek/.nuget/packages/aqua-core/5.2.0/aqua-core.5.2.0.nupkg.sha512",
     "/Users/jakubvacek/.nuget/packages/aqua-core-newtonsoft-json/5.2.0/aqua-core-newtonsoft-json.5.2.0.nupkg.sha512",

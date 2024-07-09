@@ -2,7 +2,7 @@
  * Foxentry API reference
  *
  * The version of the OpenAPI document: 2.0
- * Contact: info@foxentry.cz
+ * Contact: info@foxentry.com
  *
  * NOTE: This file is auto generated.
  * Do not edit the file manually.
@@ -91,6 +91,7 @@ public class HttpRequest : IHttpRequest
         var headers = new Dictionary<string, string>()
     {
       { "Accept", MediaTypeNames.Application.Json  },
+      { "user-agent", "FoxentrySdk/1.0.1" },
     };
         defaultHeaders?.ToList().ForEach(header => headers[header.Key] = header.Value);
         options.Headers?.ToList().ForEach(header => headers[header.Key] = header.Value);
