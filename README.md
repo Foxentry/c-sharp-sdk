@@ -55,7 +55,7 @@ internal class Program
         var config = new OpenAPIConfig();
         config.SetTokenValue("YOUR_API_KEY");
         var sdk = new FoxentrySdk.Sdk(config);
-        
+
         try {
             var response = await sdk.Company.ValidateCompanyData(/* query parameters */);
             // Use response data
@@ -72,20 +72,19 @@ Kindly note that every URI is relative to _https://api.foxentry.com_.
 
 The table displays all features categorized based on their specific purposes.
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-_FoxentrySdk.Sdk.Company_ | **ValidateCompanyData** | **POST** /company/validate | Validate company data
-_FoxentrySdk.Sdk.Company_ | **CompanySearch** | **POST** /company/search | Search company
-_FoxentrySdk.Sdk.Company_ | **GetCompanyData** | **POST** /company/get | Get company data
-_FoxentrySdk.Sdk.Email_ | **ValidateEmail** | **POST** /email/validate | Validate email
-_FoxentrySdk.Sdk.Email_ | **EmailSearch** | **POST** /email/search | Search email
-_FoxentrySdk.Sdk.Location_ | **LocationValidation** | **POST** /location/validate | Validate location data
-_FoxentrySdk.Sdk.Location_ | **LocationSearch** | **POST** /location/search | Search location
-_FoxentrySdk.Sdk.Location_ | **LocationGet** | **POST** /location/get | Get location data
-_FoxentrySdk.Sdk.Location_ | **LocationLocalization** | **POST** /location/localize | Localization
-_FoxentrySdk.Sdk.Name_ | **NameValidation** | **POST** /name/validate | Validate name data
-_FoxentrySdk.Sdk.Phone_ | **ValidatePhoneNumber** | **POST** /phone/validate | Validate phone number
-
+| Class                      | Method                   | HTTP request                | Description            |
+| -------------------------- | ------------------------ | --------------------------- | ---------------------- |
+| _FoxentrySdk.Sdk.Company_  | **ValidateCompanyData**  | **POST** /company/validate  | Validate company data  |
+| _FoxentrySdk.Sdk.Company_  | **CompanySearch**        | **POST** /company/search    | Search company         |
+| _FoxentrySdk.Sdk.Company_  | **GetCompanyData**       | **POST** /company/get       | Get company data       |
+| _FoxentrySdk.Sdk.Email_    | **ValidateEmail**        | **POST** /email/validate    | Validate email         |
+| _FoxentrySdk.Sdk.Email_    | **EmailSearch**          | **POST** /email/search      | Search email           |
+| _FoxentrySdk.Sdk.Location_ | **LocationValidation**   | **POST** /location/validate | Validate location data |
+| _FoxentrySdk.Sdk.Location_ | **LocationSearch**       | **POST** /location/search   | Search location        |
+| _FoxentrySdk.Sdk.Location_ | **LocationGet**          | **POST** /location/get      | Get location data      |
+| _FoxentrySdk.Sdk.Location_ | **LocationLocalization** | **POST** /location/localize | Localization           |
+| _FoxentrySdk.Sdk.Name_     | **NameValidation**       | **POST** /name/validate     | Validate name data     |
+| _FoxentrySdk.Sdk.Phone_    | **ValidatePhoneNumber**  | **POST** /phone/validate    | Validate phone number  |
 
 ## Contributing
 
@@ -102,5 +101,3 @@ We kindly request that you direct all questions to our support email:
 - [info@foxentry.com](mailto:info@foxentry.com)
 
 ## Frequently Asked Questions (FAQ)
-
-

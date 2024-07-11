@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Client for FoxentrySdk")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+cef9e762b5e46c57e25dd01d883f88beea0a3b62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+e58bc123545b73d6fa5d619cdd1026ed73441be8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoxentrySdk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoxentrySdk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
