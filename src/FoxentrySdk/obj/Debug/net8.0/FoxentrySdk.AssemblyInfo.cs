@@ -13,11 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Foxentry")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Client for FoxentrySdk")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c3ba2ef5aed33208ee4804e44dce5c311eead3e")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+e58bc123545b73d6fa5d619cdd1026ed73441be8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoxentrySdk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoxentrySdk")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/foxentry/foxentry-c-sharp-sdk")]
 
 // Vygenerované třídou WriteCodeFragment nástroje MSBuild

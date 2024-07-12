@@ -3,33 +3,43 @@
  * Foxentry API reference
  *
  * The version of the OpenAPI document: 2.0
- * Contact: info@foxentry.cz
+ * Contact: info@foxentry.com
  *
  * NOTE: This file is auto generated.
  * Do not edit the file manually.
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error400RequestQueryParameterRequired
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error400RequestQueryParameterRequiredGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error400RequestQueryParameterRequiredType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public Error400RequestQueryParameterRequiredSubtype? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error400RequestQueryParameterRequiredSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error400RequestQueryParameterRequiredDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestQueryParameterRequiredGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestQueryParameterRequiredGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error400RequestQueryParameterRequired
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestQueryParameterRequiredType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestQueryParameterRequiredType
     {
         [StringValue("QUERY")]
@@ -48,6 +59,7 @@ public class Error400RequestQueryParameterRequired
      * Subtype of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestQueryParameterRequiredSubtype>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestQueryParameterRequiredSubtype
     {
         [StringValue("PARAMETERS_REQUIRED")]
@@ -57,6 +69,7 @@ public class Error400RequestQueryParameterRequired
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestQueryParameterRequiredSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestQueryParameterRequiredSeverity
     {
         [StringValue("critical")]
@@ -66,6 +79,7 @@ public class Error400RequestQueryParameterRequired
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error400RequestQueryParameterRequiredDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error400RequestQueryParameterRequiredDescription
     {
         [StringValue("At least one of listed parameters is required.")]

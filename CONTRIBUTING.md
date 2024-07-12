@@ -37,6 +37,6 @@ We welcome pull requests for bug fixes, improvements, and new features. Before s
 
 ## Contact
 
-If you have any further questions or need assistance, please feel free to reach out to us at [info@foxentry.cz](mailto:info@foxentry.cz).
+If you have any further questions or need assistance, please feel free to reach out to us at [info@foxentry.com](mailto:info@foxentry.com).
 
 Thank you again for your interest in contributing to FoxentrySdk

@@ -2,7 +2,7 @@
  * Foxentry API reference
  *
  * The version of the OpenAPI document: 2.0
- * Contact: info@foxentry.cz
+ * Contact: info@foxentry.com
  *
  * NOTE: This file is auto generated.
  * Do not edit the file manually.
@@ -11,7 +11,7 @@ namespace FoxentrySdk.Core;
 
 public class OpenAPIConfig
 {
-    public Uri BaseUrl { get; set; } = new Uri("https://api.foxentry.com/v2.0");
+    public Uri BaseUrl { get; set; } = new Uri("https://api.foxentry.com");
     public string ApiVersion { get; set; } = "2.0";
     public bool WithCredentials { get; set; } = false;
     public CredentialsUsage Credentials { get; set; } = CredentialsUsage.Include;

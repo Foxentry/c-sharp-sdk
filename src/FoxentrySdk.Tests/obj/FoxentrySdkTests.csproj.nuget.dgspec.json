@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj": {}
+    "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj": {}
   },
   "projects": {
-    "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj": {
+    "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj",
+        "projectUniqueName": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj",
         "projectName": "FoxentrySdkTests",
-        "projectPath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj",
+        "projectPath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk.Tests/FoxentrySdkTests.csproj",
         "packagesPath": "/Users/jakubvacek/.nuget/packages/",
-        "outputPath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk.Tests/obj/",
+        "outputPath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jakubvacek/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj": {
-                "projectPath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj"
+              "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj": {
+                "projectPath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj": {
-      "version": "1.0.0",
+    "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj": {
+      "version": "1.0.1",
       "restore": {
-        "projectUniqueName": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj",
+        "projectUniqueName": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj",
         "projectName": "FoxentrySdk",
-        "projectPath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/FoxentrySdk.csproj",
+        "projectPath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/FoxentrySdk.csproj",
         "packagesPath": "/Users/jakubvacek/.nuget/packages/",
-        "outputPath": "/Users/jakubvacek/C-sharp-SDK/src/FoxentrySdk/obj/",
+        "outputPath": "/Users/jakubvacek/sdk-generator/foxentry/csharp-sdk/src/FoxentrySdk/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jakubvacek/.nuget/NuGet/NuGet.Config"
@@ -120,6 +120,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json.Schema": {
+              "target": "Package",
+              "version": "[3.0.15, )"
+            },
+            "Remote.Linq.Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

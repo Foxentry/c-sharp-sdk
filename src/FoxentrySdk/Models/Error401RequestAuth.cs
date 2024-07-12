@@ -3,33 +3,43 @@
  * Foxentry API reference
  *
  * The version of the OpenAPI document: 2.0
- * Contact: info@foxentry.cz
+ * Contact: info@foxentry.com
  *
  * NOTE: This file is auto generated.
  * Do not edit the file manually.
  */
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema.Generation;
+using Newtonsoft.Json.Schema;
 using FoxentrySdk.Core;
 namespace FoxentrySdk.Models;
 public class Error401RequestAuth
 {
     [JsonPropertyName("group")]
+    [Newtonsoft.Json.JsonProperty("group")]
     public Error401RequestAuthGroup? Group { get; set; }
     [JsonPropertyName("type")]
+    [Newtonsoft.Json.JsonProperty("type")]
     public Error401RequestAuthType? Type { get; set; }
     [JsonPropertyName("subtype")]
+    [Newtonsoft.Json.JsonProperty("subtype")]
     public string? Subtype { get; set; }
     [JsonPropertyName("severity")]
+    [Newtonsoft.Json.JsonProperty("severity")]
     public Error401RequestAuthSeverity? Severity { get; set; }
     [JsonPropertyName("relatedTo")]
+    [Newtonsoft.Json.JsonProperty("relatedTo")]
     public IEnumerable<string?>? RelatedTo { get; set; }
     [JsonPropertyName("description")]
+    [Newtonsoft.Json.JsonProperty("description")]
     public Error401RequestAuthDescription? Description { get; set; }
     /**
      * Group of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error401RequestAuthGroup>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error401RequestAuthGroup
     {
         [StringValue("REQUEST")]
@@ -39,6 +49,7 @@ public class Error401RequestAuth
      * Type of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error401RequestAuthType>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error401RequestAuthType
     {
         [StringValue("AUTH")]
@@ -48,6 +59,7 @@ public class Error401RequestAuth
      * Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error401RequestAuthSeverity>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error401RequestAuthSeverity
     {
         [StringValue("critical")]
@@ -57,6 +69,7 @@ public class Error401RequestAuth
      * Description of error.
      */
     [JsonConverter(typeof(StringValueEnumConverter<Error401RequestAuthDescription>))]
+    [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum Error401RequestAuthDescription
     {
         [StringValue("Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.")]
