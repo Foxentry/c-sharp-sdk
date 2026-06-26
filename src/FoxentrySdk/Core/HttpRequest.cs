@@ -92,6 +92,7 @@ public class HttpRequest : IHttpRequest
     {
       { "Accept", MediaTypeNames.Application.Json  },
       { "user-agent", "FoxentrySdk (Csharp/1.0.1; FoxentryApiReference/2.0)" },
+      { "foxentry-api-version", _config.ApiVersion },
     };
         defaultHeaders?.ToList().ForEach(header => headers[header.Key] = header.Value);
         options.Headers?.ToList().ForEach(header => headers[header.Key] = header.Value);
